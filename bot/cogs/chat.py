@@ -35,8 +35,9 @@ class Chat(commands.Cog):
         elif player.clan != self.bot.setting.clan_name:
             return await ctx.send(f"{ctx.author.mention}, o jogador '{player.name}' não é um membro do Clã Atlantis.")
         return await ctx.send(
-            f"{ctx.author.mention} um <@&{self.bot.setting.role.get('mod')}> ou "
-            f"<@&{self.bot.setting.role.get('admin')}> irá dar seu cargo em breve :)"
+            f"{ctx.author.mention} um <@&{self.bot.setting.role.get('mod')}> , "
+            f"<@&{self.bot.setting.role.get('admin')}> ou )"
+            f"<@&{self.bot.setting.role.get('mod_trial')}> irá dar seu cargo em breve :)"
         )
 
     @commands.guild_only()
